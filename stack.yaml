@@ -1,0 +1,7 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- '.'
+extra-deps:
+- bloodhound-0.14.0.0
+resolver: lts-8.16

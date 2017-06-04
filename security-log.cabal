@@ -1,0 +1,28 @@
+name:                security-log
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/security-log#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Peter Hrvola
+maintainer:          peter.hrvola@hotmail.com
+copyright:           2017 Peter Hrvola
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable security-log
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , bloodhound >= 0.14.0.0
+                     , text
+                     , yaml
+                     , bytestring
+                     , directory
+                     , http-client
+                     , http-types
