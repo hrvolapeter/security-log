@@ -1,0 +1,31 @@
+2017-07-22 18:58:43 [ThreadId 7] ERROR phoityne - H>>= :trace hspec spec
+ can not use these commands.
+[":{",":abandon",":back",":break",":continue",":delete",":force",":forward",":history",":list",":print",":sprint",":step",":steplocal",":stepmodule",":trace"]
+
+2017-07-22 18:59:15 [ThreadId 7] ERROR phoityne - H>>= :trace Analyses.XssSpec.main
+ can not use these commands.
+[":{",":abandon",":back",":break",":continue",":delete",":force",":forward",":history",":list",":print",":sprint",":step",":steplocal",":stepmodule",":trace"]
+
+2017-07-22 19:14:57 [ThreadId 7] ERROR phoityne - H>>= :trace main
+ can not use these commands.
+[":{",":abandon",":back",":break",":continue",":delete",":force",":forward",":history",":list",":print",":sprint",":step",":steplocal",":stepmodule",":trace"]
+
+2017-07-22 19:22:06 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAtttributeIsAllowed"
+2017-07-22 19:22:18 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Token"
+2017-07-22 19:22:47 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: attributes"
+2017-07-22 19:22:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
+2017-07-22 19:22:59 [ThreadId 7] ERROR phoityne - [WARN] stepOut command is not supported. ignored.
+2017-07-22 19:23:56 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfValuesIsAllowed"
+2017-07-22 19:29:34 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
+2017-07-22 19:29:35 [ThreadId 7] ERROR phoityne - "error: \8226 Found hole: _ :: t Where: \8216t\8217 is a rigid type variable bound by the inferred type of it :: t at <interactive>:1:1 \8226 In the expression: _"
+2017-07-22 19:30:09 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfValuesIsAllowed"
+2017-07-22 19:30:37 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
+2017-07-22 19:31:12 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216..\8217"
+2017-07-22 19:31:55 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
+2017-07-22 19:33:00 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Text"
+2017-07-22 19:41:06 [ThreadId 7] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Analyses.Xss", srcPosBreakPointData = SourcePosition {filePathSourcePosition = "/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Xss.hs", startLineNoSourcePosition = 31, startColNoSourcePosition = -1, endLineNoSourcePosition = -1, endColNoSourcePosition = -1}, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-07-22 19:41:21 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Bool"
+2017-07-22 19:41:42 [ThreadId 7] ERROR phoityne - "\"extractSourcePosition\" (line 14, column 6):\nunexpected end of input\nexpecting \"Stopped at \" or \"Stopped in \" [INPUT]detects img jsevent FAILED [1]\n\nFailures:\n\n  /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Analyses/XssSpec.hs:38: \n  1) detects img jsevent\n       predicate failed on: Just (Incident {reason = \"XSS attack\", log = Log {request = \"foor?save=<img onclick=\\\"\\\"/>\", analyzed = Nothing, meta = Nothing}})\n\nRandomized with seed 2081322476\n\nFinished in 47.1178 seconds\n8 examples, 1 failure\n*** Exception: ExitFailure 1\nH>>= "
+2017-07-22 19:44:07 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfValuesIsAllowed"
+2017-07-22 19:45:03 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
+2017-07-22 19:46:16 [ThreadId 7] ERROR phoityne - "\"extractSourcePosition\" (line 14, column 6):\nunexpected end of input\nexpecting \"Stopped at \" or \"Stopped in \" [INPUT]detects img jsevent FAILED [1]\n\nFailures:\n\n  /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Analyses/XssSpec.hs:38: \n  1) detects img jsevent\n       predicate failed on: Nothing\n\nRandomized with seed 1413011919\n\nFinished in 21.0972 seconds\n8 examples, 1 failure\n*** Exception: ExitFailure 1\nH>>= "
