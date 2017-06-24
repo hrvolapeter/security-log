@@ -1,16 +1,17 @@
 module Main where
 
-import           Analyses      (runAll)
-import           Config        (Config (), loadConfig)
-import           Control.Monad (mapM_)
-import           Database      (Log (..), init, search, update)
+import           Analyses                    (runAll)
+import           Config                      (loadConfig)
+import           Control.Monad               (mapM_)
+import           Control.Parallel.Strategies (parMap, rdeepseq)
+import           Data.Log
+import           Database                    (search, update)
 
 main :: IO ()
 main = do
   config <- loadConfig "./security-log.yaml"
-  _ <- Database.init config
   logs <- search config
-  print $ map runAll logs
-  mapM_ (\x -> update config (x { analysed = True })) logs
-  print logs
+  let a = parMap rdeepseq runAll logs
+  print a
+  mapM_ (\x -> update config (x { analysed = Just True })) logs
   return ()

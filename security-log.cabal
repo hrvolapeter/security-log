@@ -13,10 +13,14 @@ build-type:          Simple
 cabal-version:       >=1.10
 extra-source-files:  README.md
 
-executable security-log
+library
   hs-source-dirs:      src
-  main-is:             Main.hs
-  default-language:    Haskell2010
+  exposed-modules:     Analyses
+                     , Analyses.Xss
+                     , Config
+                     , Data.Incident
+                     , Data.Log
+                     , Database 
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bloodhound >= 0.14.0.0
@@ -26,3 +30,49 @@ executable security-log
                      , directory
                      , http-client
                      , http-types
+                     , parallel
+                     , parsec
+                     , html-parse
+                     , deepseq
+                     , html-entities
+  default-language:    Haskell2010
+
+executable security-log
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -O2
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  other-modules:       Analyses
+                     , Analyses.Xss
+                     , Config
+                     , Data.Incident
+                     , Data.Log
+                     , Database 
+  build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , bloodhound >= 0.14.0.0
+                     , text
+                     , yaml
+                     , bytestring
+                     , directory
+                     , http-client
+                     , http-types
+                     , parallel
+                     , parsec
+                     , html-parse
+                     , deepseq
+                     , security-log
+                     , html-entities
+
+test-suite security-log-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  other-modules:       Analyses.XssSpec
+  build-depends:       base
+                     , hspec
+                     , hspec-discover
+                     , QuickCheck
+                     , security-log
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
