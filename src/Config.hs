@@ -33,12 +33,13 @@ instance Monoid Config where
   mempty = NoConfig
   mappend a NoConfig = a
   mappend NoConfig b = b
-  mappend a b = Config { ip = ip b
+  mappend _ b = Config { ip = ip b
                        , size = size b
                        }
 
 ----
 
+defaultConfig :: Config
 defaultConfig = Config { ip = "http://localhost:9200", size = Just 10}
 
 loadConfig :: FilePath -> IO Config

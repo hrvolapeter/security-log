@@ -21,6 +21,8 @@ library
                      , Data.Incident
                      , Data.Log
                      , Database 
+                     , Analyses.Injection
+                     , Analyses.ObjectReference
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bloodhound >= 0.14.0.0
@@ -35,10 +37,11 @@ library
                      , html-parse
                      , deepseq
                      , html-entities
+                     , http-types
   default-language:    Haskell2010
 
 executable security-log
-  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -O2
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -O2 -Wall
   hs-source-dirs:      src
   main-is:             Main.hs
   default-language:    Haskell2010
@@ -48,6 +51,8 @@ executable security-log
                      , Data.Incident
                      , Data.Log
                      , Database 
+                     , Analyses.Injection
+                     , Analyses.ObjectReference
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bloodhound >= 0.14.0.0
@@ -69,10 +74,14 @@ test-suite security-log-test
   hs-source-dirs:      test
   main-is:             Spec.hs
   other-modules:       Analyses.XssSpec
+                     , Analyses.InjectionSpec
+                     , Analyses.ObjectReferenceSpec
+                     , Helper
   build-depends:       base
                      , hspec
                      , hspec-discover
                      , QuickCheck
                      , security-log
+                     , text
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010

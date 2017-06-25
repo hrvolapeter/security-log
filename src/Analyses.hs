@@ -2,12 +2,19 @@ module Analyses
 ( runAll
 ) where
 
-import qualified Analyses.Xss  as Xss
+import qualified Analyses.Injection       as AI
+import qualified Analyses.ObjectReference as AOR
+import qualified Analyses.Xss             as AX
 import           Data.Incident
 import           Data.Log
+import           Data.Maybe               (isNothing)
+import           Prelude                  hiding (log)
 
-analyses = [ Xss.analyse
-           ]
+analyses :: [Log -> Maybe Incident]
+analyses =  [ AX.analyse
+            , AI.analyse
+            , AOR.analyse
+            ]
 
 runAll :: Log -> [Maybe Incident]
-runAll log = map (\x -> x log) analyses
+runAll a = filter isNothing $ map (\x -> x a) analyses

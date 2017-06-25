@@ -11,7 +11,8 @@ import           Data.Text
 import           Data.Text.Internal.Builder (toLazyText)
 import           Data.Text.Lazy             (toStrict)
 import           HTMLEntities.Decoder       (htmlEncodedText)
-import           Text.HTML.Parser           (Attr (..), Token (..), parseTokens)
+import           Text.HTML.Parser           (Attr (..), AttrName, TagName,
+                                             Token (..), parseTokens)
 
 analyse :: Log -> Maybe Incident
 analyse a
@@ -37,6 +38,7 @@ analyse a
         decodeEntity :: Text -> Text
         decodeEntity = toStrict . toLazyText . htmlEncodedText
 
+allowedElemets :: [Text.HTML.Parser.TagName]
 allowedElemets = [ "a"
                 , "base"
                 , "html"
@@ -150,6 +152,7 @@ allowedElemets = [ "a"
                 , "template"
                 ]
 
+allowedAttibutes :: [Text.HTML.Parser.AttrName]
 allowedAttibutes = [ "src"
                     , "accept"
                     , "accept-charset"
@@ -258,6 +261,7 @@ allowedAttibutes = [ "src"
                     , "width"
                     , "wrap"]
 
+disallowedValues :: [Text]
 disallowedValues = [ "script"
                     , "javascript"
                     , "vbscript"

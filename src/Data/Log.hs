@@ -2,6 +2,7 @@
 {-# LANGUAGE DeriveAnyClass    #-}
 {-# LANGUAGE DeriveGeneric     #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 
 module Data.Log
 ( Log(..)
@@ -22,6 +23,7 @@ data Log = Log
   , response :: Text
   , _id      :: Maybe DocId
   , analysed :: Maybe Bool
+  , referrer :: Text
   } deriving (Eq, Generic, Show, NFData)
 
 

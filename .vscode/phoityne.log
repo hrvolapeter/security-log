@@ -23,3 +23,22 @@
 2017-06-24 22:45:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
 2017-06-24 22:45:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: value"
 2017-06-24 22:45:51 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
+2017-06-25 20:07:08 [ThreadId 7] ERROR phoityne - "error: parse error (possibly incorrect indentation or mismatched brackets)"
+2017-06-25 20:07:10 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216in\8217"
+2017-06-25 20:23:25 [ThreadId 7] ERROR phoityne - "error: parse error (possibly incorrect indentation or mismatched brackets)"
+2017-06-25 20:27:36 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
+2017-06-25 20:27:36 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
+
+2017-06-25 20:27:44 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
+2017-06-25 20:27:44 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
+
+2017-06-25 20:27:50 [ThreadId 7] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Analyses.Injection", srcPosBreakPointData = SourcePosition {filePathSourcePosition = "/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs", startLineNoSourcePosition = 26, startColNoSourcePosition = -1, endLineNoSourcePosition = -1, endColNoSourcePosition = -1}, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-06-25 20:27:50 [ThreadId 7] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Analyses.Injection", srcPosBreakPointData = SourcePosition {filePathSourcePosition = "/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs", startLineNoSourcePosition = 27, startColNoSourcePosition = -1, endLineNoSourcePosition = -1, endColNoSourcePosition = -1}, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-06-25 20:28:28 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Prelude"
+2017-06-25 20:29:24 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: decodedQuery"
+2017-06-25 20:30:24 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: a"
+2017-06-25 20:30:52 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216.\8217"
+2017-06-25 20:31:29 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Data"
+2017-06-25 21:14:27 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: decodeEntity"
+2017-06-25 21:16:18 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: decodeEntity"
+2017-06-25 21:16:44 [ThreadId 12] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs'
