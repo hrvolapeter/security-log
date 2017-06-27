@@ -1,4 +1,4 @@
-module Main where
+module Main (main) where
 
 import           Analyses                    (runAll)
 import           Config                      (loadConfig)
@@ -11,7 +11,7 @@ main :: IO ()
 main = do
   config <- loadConfig "./security-log.yaml"
   logs <- search config
-  let a = parMap rdeepseq runAll logs
+  let a = filter ([] /=) $ parMap rdeepseq runAll logs
   print a
-  mapM_ (\x -> update config (x { analysed = Just True })) logs
+  mapM_ (\x -> update config (x { analyzed = Just True })) logs
   return ()

@@ -2,8 +2,11 @@ flags: {}
 extra-package-dbs: []
 packages:
 - '.'
+- location:
+    git: git@github.com:bitemyapp/bloodhound.git
+    commit: 05a9094d858f09f9f78444af5550d68a5ac6ce1c
+  extra-dep: true
 extra-deps:
-- bloodhound-0.14.0.0
 - html-entities-1.1.4
 - html-parse-0.2.0.0
 resolver: lts-8.16
