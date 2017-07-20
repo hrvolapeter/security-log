@@ -19,8 +19,9 @@ import           System.Directory  (doesFileExist)
 
 ---- Data
 
-data Config = Config { ip   :: Text
-                     , size :: Maybe Int
+data Config = Config { ip    :: Text
+                     , size  :: Maybe Int
+                     , email :: Maybe Text
                      } | NoConfig deriving (Generic, Eq, Show)
 
 instance ToJSON Config where
@@ -35,12 +36,13 @@ instance Monoid Config where
   mappend NoConfig b = b
   mappend _ b = Config { ip = ip b
                        , size = size b
+                       , email = email b
                        }
 
 ----
 
 defaultConfig :: Config
-defaultConfig = Config { ip = "http://localhost:9200", size = Just 10}
+defaultConfig = Config { ip = "http://localhost:9200", size = Just 10, email = Nothing}
 
 loadConfig :: FilePath -> IO Config
 loadConfig fileName = do

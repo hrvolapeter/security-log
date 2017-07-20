@@ -18,6 +18,7 @@ library
   exposed-modules:     Analyses
                      , Analyses.Xss
                      , Config
+                     , Email
                      , Data.Incident
                      , Data.Log
                      , Database 
@@ -38,6 +39,7 @@ library
                      , deepseq
                      , html-entities
                      , http-types
+                     , mime-mail
   default-language:    Haskell2010
 
 executable security-log
@@ -48,6 +50,7 @@ executable security-log
   other-modules:       Analyses
                      , Analyses.Xss
                      , Config
+                     , Email
                      , Data.Incident
                      , Data.Log
                      , Database 
@@ -68,6 +71,7 @@ executable security-log
                      , deepseq
                      , security-log
                      , html-entities
+                     , mime-mail
 
 test-suite security-log-test
   type:                exitcode-stdio-1.0

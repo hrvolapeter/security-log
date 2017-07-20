@@ -20,17 +20,22 @@ logIndex = IndexName "_all"
 mapping :: MappingName
 mapping = MappingName "apache-access"
 
+boolFilter :: Filter
+boolFilter = Filter $ QueryBoolQuery BoolQuery  { boolQueryMustNotMatch = [TermQuery (Term "analyzed" "true") Nothing]
+                                                , boolQueryMustMatch = []
+                                                , boolQueryFilter = []
+                                                , boolQueryShouldMatch = []
+                                                , boolQueryMinimumShouldMatch = Nothing
+                                                , boolQueryBoost = Nothing
+                                                , boolQueryDisableCoord = Nothing
+                                                }
+
+runBloodHound :: Config -> BH IO a -> IO a
+runBloodHound cfg = withBH defaultManagerSettings (Server $ ip cfg)
+
 search :: Config -> IO [Log]
-search cfg = withBH defaultManagerSettings (Server $ ip cfg) $ do
-  let query = Filter $ QueryBoolQuery BoolQuery { boolQueryMustNotMatch = [TermQuery (Term "analyzed" "true") Nothing]
-  , boolQueryMustMatch = []
-  , boolQueryFilter = []
-  , boolQueryShouldMatch = []
-  , boolQueryMinimumShouldMatch = Nothing
-  , boolQueryBoost = Nothing
-  , boolQueryDisableCoord = Nothing
-  }
-  let searchQuery = (mkSearch Nothing (Just query)) { Database.V5.Bloodhound.size = Size (fromJust $ Config.size cfg) }
+search cfg = runBloodHound cfg $ do
+  let searchQuery = (mkSearch Nothing (Just boolFilter)) { Database.V5.Bloodhound.size = Size (fromJust $ Config.size cfg) }
   searchResult <- searchByType logIndex mapping searchQuery
   -- searchResult <- searchAll searchQuery
   parse <- parseEsResponse searchResult
@@ -48,7 +53,7 @@ search cfg = withBH defaultManagerSettings (Server $ ip cfg) $ do
 
 
 update :: Config -> Log -> IO ()
-update cfg log = withBH defaultManagerSettings (Server $ ip cfg) $ do
+update cfg log = runBloodHound cfg $ do
   let documentSetting = IndexDocumentSettings { idsVersionControl = NoVersionControl
                                               , idsParent = Just $ DocumentParent (extractMeta Data.Log._id)
                                               }
