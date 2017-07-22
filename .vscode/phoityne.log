@@ -1,101 +1,31 @@
-2017-06-24 21:21:58 [ThreadId 7] ERROR phoityne - [WARN] stepOut command is not supported. ignored.
-2017-06-24 21:22:03 [ThreadId 7] ERROR phoityne - "\"extractSourcePosition\" (line 16, column 6):\nunexpected end of input\nexpecting \"Stopped at \" or \"Stopped in \" [INPUT]  detects script element\n  detects capitalized script element\n  detects html encoded script element FAILED [1]\n\nFailures:\n\n  /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Analyses/XssSpec.hs:32: \n  1) analyse detects html encoded script element\n       predicate failed on: Nothing\n\nRandomized with seed 1873514190\n\nFinished in 24.6268 seconds\n3 examples, 1 failure\n*** Exception: ExitFailure 1\nH>>= "
-2017-06-24 21:26:16 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Token"
-2017-06-24 21:27:47 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
-2017-06-24 21:27:48 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
-2017-06-24 21:27:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
-2017-06-24 21:27:52 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
-2017-06-24 21:27:53 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
-2017-06-24 21:27:54 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: attributes"
-2017-06-24 21:27:57 [ThreadId 7] ERROR phoityne - "error: \8226 Found hole: _ :: t Where: \8216t\8217 is a rigid type variable bound by the inferred type of it :: t at <interactive>:1:1 \8226 In the expression: _"
-2017-06-24 22:41:34 [ThreadId 7] ERROR phoityne - "error: Not in scope: data constructor \8216Data.Text\8217 No module named \8216Data\8217 is imported."
-2017-06-24 22:42:26 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216->\8217"
-2017-06-24 22:42:27 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAtttributeIsAllowed"
-2017-06-24 22:42:29 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
-2017-06-24 22:42:32 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
-2017-06-24 22:42:32 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
-2017-06-24 22:42:36 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
-2017-06-24 22:42:39 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
-2017-06-24 22:42:40 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
-2017-06-24 22:42:44 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: a"
-2017-06-24 22:45:16 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: x"
-2017-06-24 22:45:38 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: x"
-2017-06-24 22:45:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
-2017-06-24 22:45:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: value"
-2017-06-24 22:45:51 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
-2017-06-25 20:07:08 [ThreadId 7] ERROR phoityne - "error: parse error (possibly incorrect indentation or mismatched brackets)"
-2017-06-25 20:07:10 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216in\8217"
-2017-06-25 20:23:25 [ThreadId 7] ERROR phoityne - "error: parse error (possibly incorrect indentation or mismatched brackets)"
-2017-06-25 20:27:36 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
-2017-06-25 20:27:36 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
+2017-07-22 18:58:43 [ThreadId 7] ERROR phoityne - H>>= :trace hspec spec
+ can not use these commands.
+[":{",":abandon",":back",":break",":continue",":delete",":force",":forward",":history",":list",":print",":sprint",":step",":steplocal",":stepmodule",":trace"]
 
-2017-06-25 20:27:44 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
-2017-06-25 20:27:44 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
+2017-07-22 18:59:15 [ThreadId 7] ERROR phoityne - H>>= :trace Analyses.XssSpec.main
+ can not use these commands.
+[":{",":abandon",":back",":break",":continue",":delete",":force",":forward",":history",":list",":print",":sprint",":step",":steplocal",":stepmodule",":trace"]
 
-2017-06-25 20:27:50 [ThreadId 7] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Analyses.Injection", srcPosBreakPointData = SourcePosition {filePathSourcePosition = "/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs", startLineNoSourcePosition = 26, startColNoSourcePosition = -1, endLineNoSourcePosition = -1, endColNoSourcePosition = -1}, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
-2017-06-25 20:27:50 [ThreadId 7] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Analyses.Injection", srcPosBreakPointData = SourcePosition {filePathSourcePosition = "/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs", startLineNoSourcePosition = 27, startColNoSourcePosition = -1, endLineNoSourcePosition = -1, endColNoSourcePosition = -1}, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
-2017-06-25 20:28:28 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Prelude"
-2017-06-25 20:29:24 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: decodedQuery"
-2017-06-25 20:30:24 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: a"
-2017-06-25 20:30:52 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216.\8217"
-2017-06-25 20:31:29 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Data"
-2017-06-25 21:14:27 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: decodeEntity"
-2017-06-25 21:16:18 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: decodeEntity"
-2017-06-25 21:16:44 [ThreadId 12] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Injection.hs'
-2017-06-27 17:50:43 [ThreadId 7] ERROR phoityne - ghci launch error. <file descriptor: 39>: hPutChar: resource vanished (Broken pipe)
+2017-07-22 19:14:57 [ThreadId 7] ERROR phoityne - H>>= :trace main
+ can not use these commands.
+[":{",":abandon",":back",":break",":continue",":delete",":force",":forward",":history",":list",":print",":sprint",":step",":steplocal",":stepmodule",":trace"]
 
-2017-06-27 17:50:43 [ThreadId 7] ERROR phoityne - [disconnectRequestHandler] ghci not started.
-2017-06-27 17:51:21 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
-2017-06-27 17:51:21 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
-
-2017-06-27 17:52:23 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
-2017-06-27 17:52:23 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
-
-2017-06-27 17:52:56 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
-2017-06-27 17:52:56 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
-
-2017-06-27 17:54:57 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs'
-2017-06-27 17:54:57 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Spec.hs
-
-2017-06-27 17:55:41 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs'
-2017-06-27 17:55:41 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs
-
-2017-06-27 17:56:39 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs'
-2017-06-27 17:56:39 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs
-
-2017-06-27 17:57:22 [ThreadId 7] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs'
-2017-06-27 17:57:22 [ThreadId 7] ERROR phoityne - startup load error. /Users/peterhrvola/dev/bakalarka/analyzer/security-log/Main.hs
-
-2017-06-27 19:02:24 [ThreadId 28] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/Setup.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 30] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/examples/Tweet.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 24] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Internal.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 20] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound.hs] <file descriptor: 40>: hGetChar: end of file
-2017-06-27 19:02:24 [ThreadId 29] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/examples/Setup.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 21] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Client.hs] <file descriptor: 40>: hGetChar: end of file
-2017-06-27 19:02:24 [ThreadId 26] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/tests/V5/tests.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 31] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 32] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Client.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 18] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Class.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 17] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 25] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/tests/V1/tests.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 33] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 41] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/tests/V1/tests.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 42] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/tests/V5/tests.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 36] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound.hs] <file descriptor: 40>: hGetLine: end of file
-2017-06-27 19:02:24 [ThreadId 14] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/examples/Tweet.hs] <file descriptor: 40>: hGetChar: end of file
-2017-06-27 19:02:24 [ThreadId 12] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/Setup.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/Setup.hs'
-2017-06-27 19:02:24 [ThreadId 37] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Client.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Client.hs'
-2017-06-27 19:02:24 [ThreadId 34] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Class.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Class.hs'
-2017-06-27 19:02:24 [ThreadId 38] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types.hs'
-2017-06-27 19:02:24 [ThreadId 39] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Class.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Class.hs'
-2017-06-27 19:02:24 [ThreadId 35] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Internal.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Internal.hs'
-2017-06-27 19:02:24 [ThreadId 13] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/examples/Setup.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/examples/Setup.hs'
-2017-06-27 19:02:24 [ThreadId 27] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_bloodhound.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_bloodhound.hs'
-2017-06-27 19:02:24 [ThreadId 40] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Internal.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Internal.hs'
-2017-06-27 19:02:24 [ThreadId 15] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound.hs'
-2017-06-27 19:02:24 [ThreadId 23] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Class.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V5/Bloodhound/Types/Class.hs'
-2017-06-27 19:02:24 [ThreadId 43] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_bloodhound.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_bloodhound.hs'
-2017-06-27 19:02:24 [ThreadId 19] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Internal.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/downloaded/mGz0HnLmcYdX/src/Database/V1/Bloodhound/Types/Internal.hs'
-2017-06-27 19:02:24 [ThreadId 44] ERROR phoityne - load file fail.[/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_security_log.hs] file load error. '/Users/peterhrvola/dev/bakalarka/analyzer/security-log/.stack-work/dist/x86_64-osx/Cabal-1.24.2.0/build/autogen/Paths_security_log.hs'
-2017-06-27 19:02:24 [ThreadId 22] ERROR phoityne - load module fail. ["Paths_security_log"] <file descriptor: 39>: hPutChar: resource vanished (Broken pipe)
-2017-06-27 19:02:24 [ThreadId 16] ERROR phoityne - load module fail. ["Paths_bloodhound"] <file descriptor: 39>: hPutChar: resource vanished (Broken pipe)
+2017-07-22 19:22:06 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAtttributeIsAllowed"
+2017-07-22 19:22:18 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Token"
+2017-07-22 19:22:47 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: attributes"
+2017-07-22 19:22:50 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
+2017-07-22 19:22:59 [ThreadId 7] ERROR phoityne - [WARN] stepOut command is not supported. ignored.
+2017-07-22 19:23:56 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfValuesIsAllowed"
+2017-07-22 19:29:34 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: name"
+2017-07-22 19:29:35 [ThreadId 7] ERROR phoityne - "error: \8226 Found hole: _ :: t Where: \8216t\8217 is a rigid type variable bound by the inferred type of it :: t at <interactive>:1:1 \8226 In the expression: _"
+2017-07-22 19:30:09 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfValuesIsAllowed"
+2017-07-22 19:30:37 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
+2017-07-22 19:31:12 [ThreadId 7] ERROR phoityne - "error: parse error on input \8216..\8217"
+2017-07-22 19:31:55 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfAllElementIsAllowed"
+2017-07-22 19:33:00 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Text"
+2017-07-22 19:41:06 [ThreadId 7] ERROR phoityne - [deleteBreakPointOnGHCi] invalid delete break point. BreakPointData {nameBreakPointData = "Analyses.Xss", srcPosBreakPointData = SourcePosition {filePathSourcePosition = "/Users/peterhrvola/dev/bakalarka/analyzer/security-log/src/Analyses/Xss.hs", startLineNoSourcePosition = 31, startColNoSourcePosition = -1, endLineNoSourcePosition = -1, endColNoSourcePosition = -1}, breakNoBreakPointData = Nothing, conditionBreakPointData = Nothing, hitConditionBreakPointData = Nothing, hitCountBreakPointData = 0}
+2017-07-22 19:41:21 [ThreadId 7] ERROR phoityne - "error: Data constructor not in scope: Bool"
+2017-07-22 19:41:42 [ThreadId 7] ERROR phoityne - "\"extractSourcePosition\" (line 14, column 6):\nunexpected end of input\nexpecting \"Stopped at \" or \"Stopped in \" [INPUT]detects img jsevent FAILED [1]\n\nFailures:\n\n  /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Analyses/XssSpec.hs:38: \n  1) detects img jsevent\n       predicate failed on: Just (Incident {reason = \"XSS attack\", log = Log {request = \"foor?save=<img onclick=\\\"\\\"/>\", analyzed = Nothing, meta = Nothing}})\n\nRandomized with seed 2081322476\n\nFinished in 47.1178 seconds\n8 examples, 1 failure\n*** Exception: ExitFailure 1\nH>>= "
+2017-07-22 19:44:07 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: checkIfValuesIsAllowed"
+2017-07-22 19:45:03 [ThreadId 7] ERROR phoityne - "error: Variable not in scope: xs"
+2017-07-22 19:46:16 [ThreadId 7] ERROR phoityne - "\"extractSourcePosition\" (line 14, column 6):\nunexpected end of input\nexpecting \"Stopped at \" or \"Stopped in \" [INPUT]detects img jsevent FAILED [1]\n\nFailures:\n\n  /Users/peterhrvola/dev/bakalarka/analyzer/security-log/test/Analyses/XssSpec.hs:38: \n  1) detects img jsevent\n       predicate failed on: Nothing\n\nRandomized with seed 1413011919\n\nFinished in 21.0972 seconds\n8 examples, 1 failure\n*** Exception: ExitFailure 1\nH>>= "

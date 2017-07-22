@@ -1,6 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Analyses.ObjectReferenceSpec (main, spec) where
+module Analyses.ObjectReferenceSpec
+  ( main
+  , spec
+  ) where
 
 import           Analyses.ObjectReference
 import           Data.Log
@@ -13,11 +16,8 @@ main = hspec spec
 
 spec :: Spec
 spec = do
-        it "detect directory traversal #1" $
-            analyse (build "../") `shouldSatisfy` isJust
-
-        it "detect directory traversal #2" $
-            analyse (build "..\\") `shouldSatisfy` isJust
-
-        it "detect /etc access" $
-            analyse (build "/etc") `shouldSatisfy` isJust
+  it "detect directory traversal #1" $
+    analyse (build "../") `shouldSatisfy` isJust
+  it "detect directory traversal #2" $
+    analyse (build "..\\") `shouldSatisfy` isJust
+  it "detect /etc access" $ analyse (build "/etc") `shouldSatisfy` isJust

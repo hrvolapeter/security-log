@@ -9,4 +9,4 @@ packages:
 extra-deps:
 - html-entities-1.1.4
 - html-parse-0.2.0.0
-resolver: lts-8.16
+resolver: lts-8.23
