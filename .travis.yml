@@ -12,7 +12,7 @@ before_install:
   - export PATH=$HOME/.local/bin:$PATH
   - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
 install:
-  - travis_wait stack -j 2 --no-terminal --install-ghc test --only-dependencies
+  - travis_wait 35 stack -j 2 --no-terminal --install-ghc test --only-dependencies
 script:
   - travis_wait stack -j 2 build --no-terminal --coverage
   - travis_wait stack -j 2 test --no-terminal --coverage
