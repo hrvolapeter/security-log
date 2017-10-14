@@ -1,0 +1,133 @@
+name:                security-log
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/security-log#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Peter Hrvola
+maintainer:          peter.hrvola@hotmail.com
+copyright:           2017 Peter Hrvola
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Analyses
+                     , Analyses.Xss
+                     , Data.Config.Config
+                     , Data.Config.InputConfig
+                     , Data.Config.OutputConfig
+                     , Data.App
+                     , Email
+                     , Data.Incident
+                     , Data.Log
+                     , Input.Database
+                     , Input.File.Apache
+                     , Input.File.File
+                     , Data.Config.Args
+                     , Analyses.Injection
+                     , Analyses.ObjectReference
+                     , Data.Config.ServerType
+                     , Input.File.Nginx
+  build-depends:       base >= 4.7
+                     , aeson
+                     , bloodhound >= 0.14.0.0
+                     , text
+                     , yaml
+                     , bytestring
+                     , directory
+                     , http-client
+                     , http-types
+                     , parallel
+                     , cmdargs
+                     , io-streams
+                     , parsec
+                     , mtl
+                     , html-parse
+                     , deepseq
+                     , html-entities
+                     , http-types
+                     , mime-mail
+                     , hdaemonize
+                     , HTTP
+  default-language:    Haskell2010
+
+executable security-log
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -O2 -Wall
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  other-modules:       Analyses
+                     , Analyses.Xss
+                     , Data.Config.Config
+                     , Data.Config.InputConfig
+                     , Data.Config.OutputConfig
+                     , Data.App
+                     , Email
+                     , Data.Incident
+                     , Data.Log
+                     , Data.Config.Args
+                     , Input.Database
+                     , Input.File.Apache
+                     , Input.File.File
+                     , Analyses.Injection
+                     , Analyses.ObjectReference
+                     , Data.Config.ServerType
+                     , Input.File.Nginx
+  build-depends:       base >= 4.7
+                     , aeson
+                     , bloodhound >= 0.14.0.0
+                     , text
+                     , yaml
+                     , bytestring
+                     , directory
+                     , http-client
+                     , http-types
+                     , parallel
+                     , cmdargs
+                     , parsec
+                     , html-parse
+                     , io-streams
+                     , deepseq
+                     , mtl
+                     , security-log
+                     , html-entities
+                     , mime-mail
+                     , hdaemonize
+                     , HTTP
+
+test-suite security-log-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test/unit
+  main-is:             Spec.hs
+  other-modules:       Analyses.XssSpec
+                     , Analyses.InjectionSpec
+                     , Analyses.ObjectReferenceSpec
+                     , Analyses.Helper
+  build-depends:       base
+                     , hspec
+                     , hspec-discover
+                     , QuickCheck
+                     , security-log
+                     , unix
+                     , text
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+
+benchmark security-log-performance
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test/performance
+  main-is:             Stream.hs
+  build-depends:       base
+                     , security-log
+                     , unix
+                     , criterion
+                     , Unixutils
+                     , process
+                     , text
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010

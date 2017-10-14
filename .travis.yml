@@ -1,0 +1,32 @@
+language: generic
+cache:
+  directories:
+  - $HOME/.stack
+  - .stack-work/
+addons:
+  apt:
+    packages:
+      - libgmp-dev
+before_install:
+  - mkdir -p ~/.local/bin
+  - export PATH=$HOME/.local/bin:$PATH
+  - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+install:
+  - travis_wait stack -j 2 --no-terminal --install-ghc test --only-dependencies
+script:
+  - travis_wait stack -j 2 build --no-terminal --coverage
+  - travis_wait stack -j 2 test --no-terminal --coverage
+  - travis_retry curl -L https://github.com/rubik/stack-hpc-coveralls/releases/download/v0.0.4.0/shc-linux-x64-8.0.1.tar.bz2 | tar -xj
+  - ./shc security-log security-log-test
+  - stack clean
+  - travis_wait stack -j 2 build --no-terminal --pedantic
+  - stack install security-log
+deploy:
+  provider: releases
+  api_key:
+    secure: i8YxWJZbxLzKbba58SwcZBvosuaB4w8y9G2fXJdIeQ1PJBSeKgMPqqhzmuwyFBUuEAW1qYL1nHBLfADuMJ3dyQgmKAlUmao6YrxhyfYuVOIymRq4fM3Kca5XTuoivM8LgMRuxfbE3nLFp1hj582kYQKE8uaF+dreo0r6ZNsxe9gV5Amrk47EIJrmF3HedTQeHadqmMel1pbD0OFcL5MTAQWIdhevaIXjZlk6rKYI5sny+b4UC9pI5PVLwA1+r0lyV0NOp6K5LHHHvtvfvnGjO+T7cdRgDsIVOu3CzEqGp98N1a+D1rIl6ftje2vi8BCrZy+VNrwUpItNVj8+bLoyXJZj2isD6Q6oGx47zrKHailiY3M9Ct5kp132LMmGtg0HT+6ahyctwVYr7o8/SDVf5cPjq2gavmklnLIj8hSSKr3G5wKfSunMkY+8jHz/1qorIAULMPwcjgOpg4l1bXSelDm0Sdg4djVjUc3CHmDz4R5+nfJYix3iqtneiFYs1yQ4D2AwuIVtNGUXjxVHU428vMzhSClsvkjE5NU9TeMSoEOEkz2lSWCAy1Ct1yh8Y5WIT5xaSRKVXF2PiLErXN98eojKGEJGVvMPfvOZpzYfy9DoW7FkcgKqaAExa8SqnIIxmljQdulYJpgQ0i215xrDtM4ajwgdJUtLyAl2SawVZBM=
+  skip_cleanup: true
+  file: $HOME/.local/bin/security-log
+  on:
+    tags: true
+    repo: retep007/security-log
